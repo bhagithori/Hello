@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+
+<body>
+<?php 
+if(isset($_POST['submit'])){
+ 
+$user = $_POST['username'];
+$pass = $_POST['password'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+if(empty($user)){
+	$msg = "Please Enter Your Username";
+	
+}else if(empty($pass)){
+	$msg = "Please Enter Your Password";
+	
+}else if(empty($email)){
+	$msg = "Please Enter Your Email Address";
+	
+}else if(empty($phone)){
+	$msg = "Please Enter your Phone Number";
+}
+	
+	
+	
+}
+
+?>
+<h1>Registration Form</h1>
+<form action="" method="post">
+<p> User Name <br/>
+<input type="text" name="username"/></p>
+<p> Password <br/>
+<input type="password" name="password"/></p>
+<p> Email <br/>
+<input type="text" name="email"/></p>
+<p> Phone <br/>
+<input type="text" name="phone"/></p>
+<p><input type="submit" name="submit" value="Sign Up"/></p>
+<p style="color:red;">
+<?php 
+if(isset($msg)){
+	echo $msg;
+	
+	
+}
+
+?>
+</p>
+
+
+</form>
+
+</body>
+</body>
+</html>
